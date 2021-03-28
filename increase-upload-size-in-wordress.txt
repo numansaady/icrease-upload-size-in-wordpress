@@ -1,0 +1,41 @@
+
+
+1. Update .htaccess file
+Open up .htaccess file on wordpress root folder in a code editor or Notepad and add the following lines.
+
+php_value upload_max_filesize 64M
+php_value post_max_size 128M
+php_value memory_limit 256M
+php_value max_execution_time 300
+php_value max_input_time 300
+
+2. Edit Functions.php File
+Open up functions.php file on theme folder to increase the size limits and add the following lines of code.
+
+@ini_set( 'upload_max_size' , '64M' );
+@ini_set( 'post_max_size', '64M');
+@ini_set( 'max_execution_time', '300' );
+
+3. php.ini Option
+add the following code in php.ini  
+or
+Open any text editor and create a new file in wordpress root directory. Copy the following code and save it as php.ini.
+
+upload_max_filesize = 25M
+post_max_size = 13M
+memory_limit = 15M
+
+4. wp-config.php File
+add the following code in wp-config.php file.
+
+@ini_set( 'upload_max_size' , '20M' );
+@ini_set( 'post_max_size', '13M');
+@ini_set( 'memory_limit', '15M' );
+
+5. using plugin: Increase Max Upload Filesize plugin.
+
+ 
+
+
+
+
